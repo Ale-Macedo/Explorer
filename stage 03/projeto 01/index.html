@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Eventos</title>
+</head>
+<body>
+  <div id="alinhamento">
+  <header>
+    <section class="topo">
+      <h1>Crie e compartilhe 
+        seu evento.</h1>
+      <p>O primeiro passo, é preencher esse
+        formulário de inscrição.</p>
+    </section>
+  </header>
+    
+  <main>
+      <form id="evento" action="">
+        <fieldset  class="informações">
+            <legend><h2>Informações do Evento</h2></legend>
+            <div class="input-wrapper">
+              
+              <label for="titulo-do-evento"> Título do evento <span>(mínimo 8 caracteres)</span></label>
+              
+              <input 
+              id="titulo do evento"
+              name="titulo do evento"
+              type="text"
+              minlength="8"
+              autocomplete="organization-title"
+              placeholder="ponginha eventos"
+              required
+              >
+            </div>
+              
+            <div class="input-wrapper">
+              <label for="link">Link do evento <span>(comece com https://)</span></label>
+
+              <input 
+              id="link" 
+              name="link"
+              type="url"
+              autocomplete="url"
+              required 
+              >
+            </div>
+  
+            <div class="input-wrapper">
+              <label for="whatsapp">Whatsapp para contato <span>(somente números)</span></label>
+
+              <input 
+              id="whatsapp"
+              name="whatsapp"
+              type="number"
+              autocomplete="tel"
+              minlength="9"
+              placeholder="11 99999-9999"
+              required
+              >
+            </div>
+
+            <div class="input-wrapper">
+              <label for="informações">Informações  extras</label>
+
+              <textarea 
+              id="informações" 
+              name="informações" ></textarea>
+
+            </div>
+
+            <div class="input-wrapper">
+              <label for="categoria">Categoria</label>
+              
+              
+              <select name="" id="categoria" >
+                <option  value=""></option>
+                <option  value="Corporativ">Corporativo</option>
+                <option value="Festas-infantis">Festas infantis</option>
+                <option value="Shows-aovivo">Shows aovivo</option>
+                <option value="Matine">Matinê</option>
+              </select>
+
+
+            <!-- <input 
+            id="categoria"
+            name="categoria"
+            type="text"
+            list="categorias"
+            autocomplete="none"
+            placeholder="tipo do evento"
+            required
+            > -->
+
+            <!-- <datalist  id="categorias" >
+              <option value=""></option>
+              <option value="Corporativo">Corporativo</option>
+              <option value="Festas infantis">Festas infantis</option>
+              <option value="Shows aovivo">Shows aovivo</option>
+              <option value="Matinê">Matinê</option>
+            </datalist> -->
+            </div>
+
+
+            
+        </fieldset>
+
+
+
+      <fieldset class="privado">
+          <legend><h2>Privacidade</h2></legend>
+          <div class="input-wrapper">
+            
+            <label for="email">E-mail do administrador <span>(digite um email válido)</span></label>
+            <input 
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="PonginhaEvents@gmail.com"
+            required
+            >
+          </div>
+            
+          <div class="input-wrapper">
+            <label for="senha">Senha de acesso para os participantes <span>(mínimo 8 caracteres)</span></label>
+
+            <input 
+            id="senha" 
+            name="senha"
+            type="password"
+            autocomplete="new-password"
+            minlength="8"
+            placeholder="********"
+            required 
+            >
+          </div>
+
+          <div id="divCheckbox" class="input-wrapper">
+            <input
+            id="checkbox"
+            name="checkbox" 
+            checked 
+            type="checkbox"
+            value="yep">
+            <label for="checkbox">Evento privado</label>
+          </div>
+      </fieldset>
+
+
+
+      <fieldset class="data-e-hora">
+        <legend><h2>Dia e hora</h2></legend>
+        <div class="data-wrapper">
+          
+          <label  for="data">Data</label>
+          <input 
+          id="data"
+          name="data"
+          type="date"
+          required
+          >
+        </div>
+          
+        <div class="data-wrapper">
+          <label for="incio">Das</label>
+
+          <input 
+          id="incio" 
+          name="incio"
+          type="time"
+          required 
+          >
+        </div>
+
+        <div class="data-wrapper">
+          <label for="termino">Até</label>
+
+          <input 
+          id="termino" 
+          name="termino"
+          type="time"
+          required 
+          >
+        </div>
+
+    </fieldset>
+
+
+
+      </form>
+
+
+
+  </main>
+  
+  <footer>
+    <button form="evento" >
+      Salvar evento 
+    </button>
+  </footer>
+
+  <!-- <script src="scripts.js"></script> -->
+</div>
+</body>
+</html>

@@ -1,0 +1,337 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+
+  font-size: 62.5%;
+  --fs-body: 1.6rem;
+  --fs-heading-emphasis: clamp(4rem, 1rem + 5vw, 5.6rem);
+  --fs-heading-subtitle: 1.6rem;
+  --fs-main-emphasis: clamp(1.6rem, 0.5rem + 3vw, 4rem);
+  --fs-main-subtitle: 1.6rem;
+
+  --ff-heading: 'epilogue', sans-serif;
+  --ff-texting: 'open sans', sans-serif;
+
+
+  --hue:250;
+  --bg-prymary: hsla(calc(var(--hue) - 13), 22%, 20%, 1);
+  --fc-prymary: hsla(var(--hue), 0%, 100%, 1);
+  --fc-secondary: hsla(var(--hue), 50%, 80%, 1);
+  --fc-secondary-dark: hsla(var(--hue), 100%, 11%, 1);
+
+
+}
+
+/* animation-name: topdown; */
+/* animation-duration: 1s; */
+/* transition-timing-function: cubic-bezier(1, 0, 0.42, 1.01); */
+/* animation-fill-mode: forwards;   faz n voltar a estado padrão*/
+/* animation-direction: ; muda a direção da animaçao */
+/* animation-timing-function: ; o qual suave vai ser animação */
+/* animation-iteration-count: infinite;  */
+/* quntidadede vezes que acontece */
+/* animation-play-state:; quando comesar e  parar a animaçao */
+
+@keyframes topdown{
+  0% {
+    opacity: 0.15;
+    transform: translateY(-85px);
+  }
+
+  25% {
+    opacity: 0.5;
+    transform: translateY(+20px)
+  }
+
+  50%{
+    opacity: 0.75;
+    transform: translateY(-10px);
+  }
+
+  75%{
+    opacity: 1;
+    transform: translateY(+5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes leftRight{
+  0% {
+    opacity: 0.15;
+    transform: translateX(-85px);
+  }
+
+  25% {
+    opacity: 0.5;
+    transform: translateX(+20px)
+  }
+
+  50%{
+    opacity: 0.75;
+    transform: translateX(-10px);
+  }
+
+  75%{
+    opacity: 1;
+    transform: translateX(+5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes rightLeft{
+  0% {
+    opacity: 0.15;
+    transform: translateX(+85px);
+  }
+
+  25% {
+    opacity: 0.5;
+    transform: translateX(-20px)
+  }
+
+  50%{
+    opacity: 0.75;
+    transform: translateX(+10px);
+  }
+
+  75%{
+    opacity: 1;
+    transform: translateX(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+body{
+  font-family: var(--ff-texting);
+
+  background-color: var(--bg-prymary);
+  color: var(--fc-prymary);
+  font-size: var(--fs-body);
+
+  display: flex;
+  justify-content: center;
+}
+
+.page{
+  max-width: clamp(32.9rem, 30rem + 60vw, 117rem);
+  margin: 10rem 2.3rem ;
+  /* border: 1px solid red; */
+}
+
+@media(min-width: 700px){
+
+  /* .page {
+    max-width: 117rem;
+  } */
+
+  main{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 960px) {
+
+  main{
+    grid-template-areas: "A B B"
+                         "C C D";
+  }
+  main div:nth-child(1){
+    grid-area: A;
+  }
+  main div:nth-child(2){
+    grid-area: B;
+  }
+  main div:nth-child(3){
+    grid-area: C;
+  }
+  main div:nth-child(4){
+    grid-area: D;
+  }
+}
+
+img{
+  width: 100%;
+  height: auto;
+  border-radius: 0.6rem;
+
+  
+}
+
+body::-webkit-scrollbar {
+  width: 1.2rem;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--bg-prymary);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: hsla(calc(var(--hue) - 13), 22%, 15%, 1);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid hsla(calc(var(--hue) - 13), 22%, 16%, 1);  /* creates padding around scroll thumb */
+}
+
+header{
+  margin: 0rem 0rem 8rem;
+  /* border: 1px solid red; */
+  font-family: var(--ff-heading);
+  text-align: center;
+
+
+  animation-name: topdown;
+  animation-duration: 1s;
+  transition-timing-function: cubic-bezier(1, 0, 0.42, 1.01);
+}
+
+header::after {
+ content: "";
+ opacity: 0;
+ display: inline-block;
+ width: calc(20.5rem + 1rem + 5vw);
+ border: 0.2rem solid var(--fc-prymary);
+
+ animation-name: leftRight;
+ animation-duration: 0.75s;
+ animation-delay: 0.75s;
+ animation-fill-mode: forwards;
+ transition-timing-function: cubic-bezier(1, 0, 0.42, 1.01);
+}
+
+header p{
+  font-size: var(--fs-heading-subtitle);
+  font-weight: 400;
+  text-transform: uppercase;
+  
+  color: var(--fc-secondary);
+  
+  line-height: 3.2rem;
+  letter-spacing: 0.3rem;
+  
+  margin-bottom: 1.6rem;
+}
+
+header h1{
+  font-size: var(--fs-heading-emphasis);
+  font-weight: 800;
+  
+  color: var(--fc-prymary);
+  
+  line-height: 4.8rem;
+  
+}
+
+main{
+  display: grid;
+  gap: 3rem;
+}
+
+#card{
+  font-family: var(--ff-heading);
+  position: relative;
+  opacity: 0;
+
+}
+
+/* #card:hover{
+  transform: scale(1.1);
+} */
+
+.hover{
+  transition: 300ms;
+  transition-delay: 50ms;
+  transition-timing-function: cubic-bezier(1, 0, 0.42, 1.01);
+}
+.hover:hover{
+  transform: scale(1.1);
+}
+.hover:hover img{
+  filter: brightness(0.85) blur(1.5px);
+}
+
+
+#card img {
+  height: 41.6rem;
+  object-fit: cover;
+
+  transition: 300ms;
+  transition-delay: 50ms;
+  transition-timing-function: cubic-bezier(1, 0, 0.42, 1.01);
+
+  /* filter: brightness(0.9) ; */
+}
+
+
+#card h2{
+  font-size: var(--fs-main-emphasis);
+
+  position: absolute;
+  left: 2.8rem;
+  bottom: 5.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+
+}
+
+#card h2 span{
+  width: fit-content;
+  height: 3.8rem;
+  padding: 0 1.6rem;
+
+  border-radius: 2rem;
+  background-color: var(--fc-prymary);
+
+  font-size: var(--fs-main-subtitle);
+  font-weight: 400;
+
+
+  color: var(--fc-secondary-dark);
+
+  display: inline-flex;
+  align-items: center;
+}
+
+
+
+
+
+
+
+.animation01{
+  animation-name: leftRight;
+  animation-duration: 0.75s;
+  animation-delay: 0.95s;
+  animation-fill-mode: forwards;
+  transition-timing-function: cubic-bezier(1, 0, 0.42, 1.01);
+}
+.animation02{
+  animation-name: rightLeft;
+  animation-duration: 0.75s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  transition-timing-function: cubic-bezier(1, 0, 0.42, 1.01);
+}
+.animation03{
+  animation-name: leftRight;
+  animation-duration: 0.75s;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
+  transition-timing-function: cubic-bezier(1, 0, 0.42, 1.01);
+}

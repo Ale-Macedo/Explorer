@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+
+  --ff-time: 'Roboto', sans-serif;
+
+
+  --bg-color: hsla(240, 5%, 7%, 1);
+  --bg-controls: hsla(194, 100%, 63%, 0.13);
+
+  --base-color: hsla(194, 100%, 63%, 1);
+  --white-color: hsla(0, 0%, 100%, 1);
+}
+
+body{
+  background-color: var(--bg-color);
+  color: var(--white-color);
+  font-family: var(--ff-time);
+  display: grid;
+  min-height: 100vh;
+
+}
+
+main{
+  width: 82.1rem;
+  height: 33.6rem;
+  justify-self: center;
+  align-self: end;
+}
+
+footer{
+  justify-self: end;
+  align-self: end;
+  margin-bottom: 3.2rem;
+  margin-right: 4rem;
+}
+
+#time{
+  padding-left: 20px;
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+  display: flex;
+ 
+}
+
+
+#controls{  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  width: clamp(10rem, 10rem + 30vw, 22.8rem);
+  height: clamp(8rem, 5rem + 10vw, 10.8rem);
+  background-color: var(--bg-controls);
+  border-radius: 9999px;
+
+}
+
+.hide{
+  display: none;
+}
+
+button svg{
+  width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
