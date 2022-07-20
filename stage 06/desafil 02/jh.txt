@@ -1,0 +1,18 @@
+            <img src="https://github.com/Ale-Macedo.png" alt="imagem de Ale-Macedo">
+            <a href="https://github.com/Ale-Macedo" target="_blank">
+              <p>Ale Macedo</p>
+              <span>Ale-Macedo</span>
+            </a>
+          </td>
+
+          <td class="repositories">
+           333
+          </td>
+
+          <td class="followers">
+            666
+          </td>
+          
+          <td>
+            <button class="remove">Remover</button>
+          </td>
