@@ -24,16 +24,16 @@
 
   --hue:250;
 
-  --bg-prymary: hsla(233, 100%, 97%, 1);
+  --bg-primary: hsla(233, 100%, 97%, 1);
   --bg-secondary: hsla(218, 17%, 62%, 1);
-  --bg-prymary-contrast: hsla(275, 18%, 79%, 1);
+  --bg-primary-contrast: hsla(275, 18%, 79%, 1);
 
   --bg-secondary-contrast: hsla(312, 91%, 96%, 1);
 
 
 
-  --fc-prymary-whit: hsla(0, 0%, 100%, 1);
-  --fc-prymary: hsla(274, 84%, 12%, 1);
+  --fc-primary-whit: hsla(0, 0%, 100%, 1);
+  --fc-primary: hsla(274, 84%, 12%, 1);
   --fc-secondary: hsla(232, 17%, 35%, 1);
 
   /* --fc-secondary-dark: hsla(232, 17%, 35%, 1); */
@@ -132,13 +132,13 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--bg-prymary-contrast);        /* color of the tracking area */
+  background: var(--bg-primary-contrast);        /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: var(--bg-secondary);    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid var(--bg-prymary-contrast);  
+  border: 3px solid var(--bg-primary-contrast);  
   /* creates padding around scroll thumb */
 }
 
@@ -167,7 +167,7 @@ body::before{
 
 body{
   font-size: var(--fs-body);
-  background: var(--bg-prymary);
+  background: var(--bg-primary);
 
   width: 100%;
   /* display: grid; */
@@ -208,7 +208,7 @@ header{
 .logo-name{
   width: 100%;
   height: 4.9rem;
-  background: var(--bg-prymary-contrast);
+  background: var(--bg-primary-contrast);
 
   display: flex;
   align-items: center;
@@ -226,7 +226,7 @@ header{
 .logo-name h1{
   font-size: var(--fs-mob-emphasis);
   font-family: var(--ff-heading);
-  color: var(--fc-prymary-whit);
+  color: var(--fc-primary-whit);
   line-height: 3.4rem;
   letter-spacing: 0.05em;
   font-weight: 400;
